@@ -13,6 +13,7 @@ jobs:
             - name: 'Auto-assign PR Reviewer'
               uses: zhgchgli0718/auto-assign-issue@v2
               with:
+                  repo-token: ${{ secrets.GITHUB_TOKEN }}
                   targetTeam: 'ios' # The name of the team to which the target assignees belong
                   numOfAssignee: 2 # Number of random assignees
                   excludeAssignees: 'zhgtest' # Optional, Users to be excluded from being assigned as reviewers (comma-separated)
